@@ -1,15 +1,22 @@
-import logo from './logo.png';
-import './App.css';
+import "./App.css";
+import Applet from "./components/Applet/Applet";
+import AppletCollection from "./components/AppletCollection/AppletCollection";
+import Sandbox from "./components/Sandbox";
 
 function App() {
+  const appStyles = {
+    backgroundColor: "#333333",
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p style={{marginTop: "100 px", paddingTop: "100px"}}>
-          Website coming soon...
-        </p>      
-      </header>
+    <div style={appStyles}>
+      {/* <AppletCollection>
+        <Applet name={"Test"} />
+        <Applet name={"Applet"} />
+      </AppletCollection> */}
+      <Sandbox />
     </div>
   );
 }
